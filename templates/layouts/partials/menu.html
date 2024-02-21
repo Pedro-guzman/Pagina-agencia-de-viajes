@@ -1,0 +1,71 @@
+{% load static %}
+<!---->
+<div class="menu-fixed">
+    <!---->
+    <nav class="nav-menu nav">
+        <!---->
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="../images/logo.png" alt="Logo"></a>
+        </div>
+        <div class="main-menu">
+            <ul class="main-menu">
+                <li><a href="{% url 'index' %}">Nosotros</a></li>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Destinos</a>
+                    <ul>
+                        <li><a href="{% url 'bonampak' %}">Bonampak</a></li>
+                        <li><a href="{% url 'cañon' %}">Cañon del sumidero</a></li>
+                        <li><a href="{% url 'casa' %}">Casa Misol ha</a></li>
+                        <li><a href="{% url 'ciapa' %}">Chiapa de orozco</a></li>
+                        <li><a href="{% url 'san' %}">San cristoval de las casas</a></li>
+                    </ul>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Promociones</a>
+                    <ul>
+                        <li><a href="{% url 'dos' %}">2 X 1</a></li>
+                        <li><a href="{% url 'promo' %}">Promo amigos</a></li>
+                        <li><a href="{% url 'avion' %}">Avión</a></li>
+                        <li><a href="{% url 'tematicos' %}">Temáticos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Tips</a>
+                    <ul>
+                        <li><a href="{% url 'sol' %}">Sol y playa</a></li>
+                        <li><a href="{% url 'tours' %}">Tours</a></li>
+                        <li><a href="{% url 'top' %}">Top 10</a></li>
+                        <li><a href="{% url 'guia' %}">Guía rápida</a></li>
+                        <li><a href="{% url 'cafe' %}">Café</a></li>
+                        <li><a href="{% url 'mapas' %}">Mapas y recorridos</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="bi bi-caret-down-fill icon-menu"></i>Contactanos</a>
+                    <ul>
+                        <li><a href="{% url 'direccion' %}">Dirección</a></li>
+                        <li><a href="{% url 'contform' %}">Formulario de contacto</a></li>
+                        <li><a href="{% url 'mapa' %}">Mapa</a></li>
+                    </ul>
+                </li>
+                </li>
+            </ul>
+
+
+        </div>
+        <!--Botos de registro e inicio de sesión-->
+        <div class="get-started">
+            <a href="{% url 'regisform' %}">
+                <button class="btn-sec-s">Empezar</button>
+            </a>
+
+        </div>
+        <div class="sing-in">
+            <a href="{% url 'sesionform' %}">
+                <button class=" btn-sec">Iniciar sesion</button>
+
+            </a>
+        </div>
+        <!---->
+    </nav>
+</div>

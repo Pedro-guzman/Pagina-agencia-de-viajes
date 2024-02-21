@@ -1,0 +1,490 @@
+:root { /*Aquí se guardan las variables de los colores que se utilizan en toda la pagina.*/
+    --color-boton: #5463FF;
+   /* --background-menu: rgba(255, 255, 255, 0.5);*/
+    --background-menu: rgba(0, 0, 0, 0.5);
+    --color-text: white;
+}
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+section {
+    height: 100vh;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*ESstilos del contenedor principal*/
+.contain {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+/**/
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+/*Aquí se indica que el menu de navegacion tentra una posicion fija en la parte superior*/
+.menu-fixed {
+    position: fixed;
+    width: 100%;
+    margin-left: 0;
+   
+}
+/**/
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.nav-menu {
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #ddd;
+    background-color: var(--background-menu);
+}
+
+/**/
+.logo {
+    width: 30px;
+}
+.logo a {
+    width: 30px;
+    font-size: 1rem;
+    color: #19A7CE;
+    text-decoration: none;
+}
+.logo img {
+    padding: 15px;
+    display: flex;
+    width: 70px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+/*Aquí inician los estilos para que los submenus esten ocultos hasta que el cursor se posicione sobre algun elemento.*/
+.nav-menu .main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+/*Estilos de las anclas y los elementos de lista del menú oculto*/
+.nav-menu .main-menu li a {
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-menu .main-menu li {
+    font-size: 0.75rem;
+    display: inline-block;
+    position: relative;
+    color: var(--color-text);
+}
+.nav-menu .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: var(--color-text);
+    transition: background-color 0.5 ease;
+}
+.nav-menu .main-menu li a:hover {
+    background-color: var(--background-menu);
+    text-decoration: underline;
+    border-radius: 5px;
+}
+.nav-menu .main-menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-menu);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+.nav-menu .main-menu li ul li {
+    display: block;
+}
+.nav-menu .main-menu li ul li a {
+    padding: 10px;
+    color: var(--color-text);
+    text-decoration: none;
+    display: block;
+}
+.nav-menu .main-menu li ul li a:hover {
+    background-color:  var(--background-menu);
+}
+.nav-menu .main-menu li:hover ul {
+    display: block;
+}
+/*Aquí inician los estilos de los botones para registro e inicio de sesión.*/
+.btn-sec-s { /*Estilos del botón Empezar*/
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    border: solid 2px var(--color-boton);
+    font-size: 14px;
+}
+.btn-sec-s a {
+    text-decoration: none;
+    color: white;
+}
+.btn-sec-s:hover, a:hover {
+    background-color: transparent;
+    color: var(--color-text);
+}
+/**/
+/*Inicio de los estilos del botón Iniciar*/
+.btn-sec {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn-sec a { /*Ingresamos al ancla el botón Iniciar para darle estilos.*/
+    text-decoration: none;
+    color: var(--color-boton);
+}
+.btn-sec:hover {
+    background-color: var(--color-boton);
+    border: solid 1px var(--color-boton);
+    color: white;
+}
+.btn-sec a:hover {
+    color: white;
+}
+
+/**/
+/**/
+
+/**/
+/**/
+/**/
+i {
+    margin-right: 5px;
+}
+/**/
+/**/
+
+/*Aquí estan los estilos de la seccion de inicio*/
+.cont-img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cont-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*Estilos de los textos de las imagenes de los destinos*/
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interior */
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+/*Estilos del boton de destinos*/
+.btn-d{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: var(--color-boton);padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--color-boton);
+}
+.btn-d:hover, a:hover {
+    background-color: transparent;
+    color: var(--color-text);
+}
+/**/
+
+
+/*Estilos de footer*/
+.footer {
+    align-items: center;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:  #fbf5f5;
+    border-top: solid 1px #ddd;
+}
+/*aquí se aplican los estilos a las anclas del footer*/
+.pie {
+    text-align: center;
+}
+.pie a {
+    text-decoration: none;
+    color: var(--color-boton);
+    font-size: 11px;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+.pie a:hover {
+    color: #c7c5c5;
+    text-decoration: underline
+}
+
+/*Aquí estan los estilos de terminos y condiciones y aviso de privacidad*/
+
+.terminos, .aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    margin: auto;
+    padding: 100px;
+}
+.terminos, .aviso, h2 {
+    font-size: 20px;
+    margin: 20px;
+}
+.terminos, .aviso p {
+    font-size: 10px;
+}
+
+
+
+/*Estilos del formulario de registro e inicio de sesión*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 450px;
+    min-height: 80vh;
+    padding: 50px;
+}
+/*Estilo de los botones del formulario de registro.*/
+.botones {
+    display: flex;
+    gap: 20px;
+    align-self: flex-start;
+    align-items: center;
+    margin: auto;
+    align-content: space-around;
+}
+.google-btn {
+    display: flex;
+    height: 40px;
+    background-color: var(--color-boton);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    align-items: center;
+    border: solid 2px var(--color-boton);
+}
+.google-btn:hover {  /*opacidad al posicionar el puntero sobre el botón*/
+    cursor: pointer;
+    background-color: rgb(35, 121, 241);
+
+   
+
+}
+/*Estilos del logo de google que se encuentra en el botón*/
+.google-btn picture {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  
+}
+.google-btn picture img {
+    width: 75%;
+}
+.google-btn span {
+    color: #fff;
+    padding: 15px;
+}
+/*Estilos del boton Twiter.*/
+.twiter-btn {
+    display: flex;
+    height: 40px;
+    color: #ccc;
+    background-color: #eee;
+    border: none;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+.twiter-btn:hover {
+    background-color: #ddd;
+}
+.teiter-btn picture {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+  
+}
+.twiter-btn picture img {
+    width: 75%;
+    
+}
+/*Estilos de la linea divisora.*/
+.separator {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.separator span {
+    color: #8b8b8b;
+}
+/**/
+/*Estilos de los inputs del formulario*/
+/**/
+.section-inputs {
+    display: flex;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+label {
+    background-color: transparent;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label span {
+    font-weight: 700;
+}
+.section-inputs label input {
+    width: 80%;
+    background-color: #f3f3f4;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    
+}
+
+label input {
+    display: flex;
+    width: 90%;
+    background-color: #f3f3f4;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 13px;
+    border-radius: 10px;
+    transition: background-color 0.3s, border 0.2s;
+    border: solid 2px transparent;
+}
+label input:hover {
+    border: solid 2px #f3f3f4;
+    box-shadow: 0 0 4px #8b8b8b;
+}
+label input:focus {
+    background-color: #fff;
+    border: solid 4px #f3f3f4;
+    
+}
+.checkbox-label {
+    display: flex;
+    margin: 10px;
+}
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    margin: 10px;
+}
+.checkbox-label span {
+    font-weight: 400;
+}
+.submit-btn {
+    width: 100%;
+    background-color: var(--color-boton);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: 2px solid var(--color-boton);
+
+}
+.submit-btn:hover {
+    background-color: transparent;
+    opacity: 0.75;
+    color: var(--color-boton);
+    font-weight: 700;
+}
+/**/
+/*Estilos del formulario de contacto*/
+/**/
+.cont {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos del mensaje de envio de los formularios */
+.style-mensaje {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 300px;
+    min-height: 85vh;
+}
+

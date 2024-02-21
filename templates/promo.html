@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+    <!---->
+    <section>
+        <div class="cont-img" id="promo">
+            <img src="{% static 'img/amigos-2.png' %}" alt="">
+        </div>
+         <!--texto y boton de imagen de destinos-->
+         <div class="overlay-text">
+            <h2>Promo amigos</h2>
+            <p>¡Reserva ahora y obten esta promoción!</p>
+        </div>
+        <div>
+            <a href="#"><button class="btn-d">¡Reserva ahora!</button></a>
+        </div>
+    </section>
+     <!---->
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+     <!--Formulario de regidstro-->
+     <div class="container">
+        <h3>Iniciar sesión</h3>
+        <div class="botones">
+            <button class="google-btn">
+                <picture><img src="/images/Google__G__Logo.svg.png" alt="Logo de google"></picture>
+                <span>Continuar con  Google</span>
+            </button>
+            <button class="twiter-btn">
+                <picture><img src="/images/logo-twiter.png" alt="logo de twiter"></picture>
+            </button>
+        </div>
+        <!--Linea divisora-->
+        <div class="separator">
+            <hr>
+            <span>ok</span>
+            <hr>
+        </div>
+        <!--Inicio del formulario-->
+        <form action="{% url 'postgoal' %}" method="POST">
+            {% csrf_token %}
+            <div class="section-inputs">
+                <label for="info">
+                    <span>Name</span>
+                    <input type="text" id="info" name="info">
+                </label>
+                <!---->
+                <label for="username">
+                    <span>Username</span>
+                    <input type="text" id="username" name="username">
+                </label>
+            </div>
+            <!---->
+            <label for="email">
+                <span>Email</span>
+                <input type="text" id="email" name="email">
+            </label>
+            <!---->
+            <label for="password">
+                <span>Password</span>
+                <input type="password" id="password" name="password" placeholder="6+characters">
+            </label>
+            <!---->
+            <label for="checkbox" class="checkbox-label">
+                <input type="checkbox" id="checkbox-label">
+                <span>Acepto</span>
+            </label>
+            <!---->
+            <button type="submit" class="submit-btn">Iniciar sesión</button>
+        </form>
+
+    </div>
+    <!---->
+{% endblock %}

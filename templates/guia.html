@@ -1,0 +1,19 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+     <!---->
+     <section>
+        <div class="cont-img" id="guia">
+            <img src="{% static 'img/guia.jpeg' %}">
+        </div>
+         <!--texto y boton de imagen de destinos-->
+         <div class="overlay-text">
+            <h2>Guía</h2>
+            <p>descarga la guía</p>
+        </div>
+        <div>
+            <a href="#"><button class="btn-d">¡Reserva ahora!</button></a>
+        </div>
+    </section>
+     <!---->
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="cont-img" id="nosotros">
+        <img src="{% static 'img/background.webp' %}">
+    </div>
+     <!--texto con descripción -->
+     <div class="overlay-text">
+        <h2>Nosotros</h2>
+         <p>¡Registrate y descubre hermosos lugares! <span id="textoOculto" style="display:none;">Nuestro compromiso es llevarte a los mejores destinos naconales e internacionales, contamos con mas de 20 años de experiencia.</span> <a href="#" id="enlaceLeerMas">Leer más...</a></p>
+    </div>
+    <div>
+        <a href="/html/botones/registro.html"><button class="btn-d">Empezar</button></a>
+    </div>
+</section>
+{% endblock %}

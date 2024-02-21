@@ -1,0 +1,55 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+     <!--Formulario de contacto-->
+    
+          <div class="container">
+             <h3>Contactanos</h3>
+            
+             <!--Linea divisora-->
+             <div class="separator">
+                 <hr>
+                 <span>ok</span>
+                 <hr>
+             </div>
+             <!--Inicio del formulario-->
+             <form action="{% url 'goal2' %}" method="GET">
+                 <div class="section-inputs">
+                     <label for="name">
+                         <span>Name</span>
+                         <input type="text" id="name" name="name">
+                     </label>
+                     <!---->
+                     <label for="username">
+                         <span>Username</span>
+                         <input type="text" id="username" name="username">
+                     </label>
+                 </div>
+                 <!---->
+                 <label for="email">
+                     <span>Email</span>
+                     <input type="text" id="email" name="email">
+                 </label>
+                 <!---->
+                
+                 <label for="mensaje">
+                    <span>Mensaje</span>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </label>
+            
+                 <!---->
+                 <label for="checkbox" class="checkbox-label">
+                     <input type="checkbox" id="checkbox-label">
+                     <span>Aceptar terminos y condiciones</span>
+                 </label>
+                 <!---->
+                 <button type="submit" class="submit-btn">Enviar</button>
+             </form>
+     
+         </div>
+         <!---->
+
+           
+
+    </div>
+{% endblock %}
